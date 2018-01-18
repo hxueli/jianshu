@@ -3,13 +3,19 @@
     <div slot="header" class="clearfix">
       <span class="card">
         <ul>
-          <li><img class="img-Avatar" src="../../assets/logo.png" width="24px" height="24px"/></li>
+          <li><img class="img-Avatar" src="../../assets/c6.png" height="24" width="24"/></li>
           <li>昵称</li>
-          <li class="time"><time >{{ currentDate }}</time></li>
+          <li class="time"><time >{{  currentDate  }}</time></li>
         </ul>
-        <div class="content">
-        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+        <div class="content"><img class="content-img" src="../../assets/c1.png" height="100%" width="30%" />
+        内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容内容
       </div>
+        <ul>
+        <el-tag>标签</el-tag>
+        <el-tag>标签</el-tag>
+        <el-tag>标签</el-tag>
+        <el-tag>标签</el-tag>
+          </ul>
         <hr>
       </span>
     </div>
@@ -25,7 +31,7 @@
     data() {
       return {
         currentDate: new Date()
-      };
+      }
     }
   }
 </script>
@@ -38,6 +44,22 @@
 
   .content {
     text-align: left;
+    line-height: 20px;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-line-clamp: 4;*/
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-line-clamp: 4;*/
+  }
+
+  .content-img {
+    float: right;
   }
 
   .time {
@@ -46,9 +68,10 @@
     color: #999;
   }
 
-  ul li {font-size: 24px}
-
-  .img-Avatar {margin: 7px}
+  .img-Avatar {
+    margin: 0px 7px;
+    vertical-align: middle;
+  }
 
   /*.text {*/
     /*font-size: 14px;*/
