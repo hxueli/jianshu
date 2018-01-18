@@ -1,18 +1,24 @@
 <template>
   <div id="app">
-    <mynavbar></mynavbar>
+    <Header></Header>
+    <!--<Aside></Aside>-->
+    <!--<Main></Main>-->
     <!--<img src="./assets/logo.png">-->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import mynavbar from './components/Common/NavBar.vue'
+  import Header from './components/Common/Header.vue'
+//  import Aside from './components/Common/Aside.vue'
+//  import Main from './components/Common/Main.vue'
 
 export default {
   name: 'app',
   components: {
-    mynavbar
+    Header
+//    Aside,
+//    Main
   }
 }
 </script>

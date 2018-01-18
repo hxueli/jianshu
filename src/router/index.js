@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+// import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/Home'
-import Nav from '@/components/Nav'
-import Page from '@/components/Page'
+import Download from '@/components/Download'
+import SignIn from '@/components/SignIn'
+import SignUp from '@/components/SignUp'
 import One from '@/components/HomeComponents/One'
 import Two from '@/components/HomeComponents/Two'
+import Carousel from '@/components/HomeComponents/Carousel'
 
 Vue.use(Router)
 
@@ -13,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Home',
+      component: Home
     },
     {
       path: '/Home',
@@ -22,7 +24,12 @@ export default new Router({
       component: Home,
       children: [
         {
-          path: '/',
+          path: 'Carousel',
+          name: 'Carousel',
+          component: Carousel
+        },
+        {
+          path: 'One',
           name: 'One',
           component: One
         },
@@ -34,14 +41,19 @@ export default new Router({
       ]
     },
     {
-      path: '/Nav',
-      name: 'Nav',
-      component: Nav
+      path: '/Download',
+      name: 'Download',
+      component: Download
     },
     {
-      path: '/Page',
-      name: 'Page',
-      component: Page
+      path: '/SignIn',
+      name: 'SignIn',
+      component: SignIn
+    },
+    {
+      path: '/SignUp',
+      name: 'SignUp',
+      component: SignUp
     }
   ]
 })
