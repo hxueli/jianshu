@@ -3,11 +3,11 @@
     <div slot="header" class="clearfix">
       <span class="card">
         <ul>
-          <li><img class="img-Avatar" src="../../assets/c6.png" height="24" width="24"/></li>
+          <li><img class="img-Avatar" src="../../assets/1.jpg" height="24" width="24"/></li>
           <li>昵称</li>
           <li class="time"><time >{{  currentDate  }}</time></li>
         </ul>
-        <div class="content"><img class="content-img" src="../../assets/c1.png" height="100%" width="30%" />
+        <div class="content">
         内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容内容内容内容内容内容内容内容内容内容内容内容内内容内容内容
       </div>
         <ul>
@@ -16,6 +16,8 @@
         <el-tag>标签</el-tag>
         <el-tag>标签</el-tag>
           </ul>
+      <img class="content-img" src="../../assets/1.jpg" height="160px" width="300px" />
+
         <hr>
       </span>
     </div>
@@ -37,29 +39,36 @@
 </script>
 
 <style>
+  ul>.el-tag {
+    padding: 0px 12px;
+    margin: 0px;
+  }
+  .clearfix {
+    margin: 0px 20px;
+    width: 840px;
+  }
+
   .card {
+    position: relative;
     display: inline-table;
-    width: 80%;
+    width: 880px;
   }
 
   .content {
+    margin: 12px 0px;
     text-align: left;
     line-height: 20px;
-    width: 100%;
+    width: 60%;
     height: 80px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: pre-wrap;
-    /*display: -webkit-box;*/
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-line-clamp: 4;*/
-    /*display: -webkit-box;*/
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-line-clamp: 4;*/
   }
 
   .content-img {
-    float: right;
+    position: absolute;
+    right: 40px;
+    top: 0px;
   }
 
   .time {
@@ -73,31 +82,6 @@
     vertical-align: middle;
   }
 
-  /*.text {*/
-    /*font-size: 14px;*/
-  /*}*/
-
-  /*.item {*/
-    /*margin-bottom: 8px;*/
-  /*}*/
-
-  /*.clearfix:before,*/
-  /*.clearfix:after {*/
-    /*display: table;*/
-    /*content: "";*/
-  /*}*/
-  /*.clearfix:after {*/
-    /*clear: both*/
-  /*}*/
-
-  /*.box-card {*/
-    /*display: inline-block;*/
-    /*width: 480px;*/
-  /*}*/
-
-  /*.el-card__header {*/
-    /*padding: 12px;*/
-  /*}*/
 
   span ul {
     list-style:none;
