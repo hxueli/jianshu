@@ -14,7 +14,7 @@
           <router-link id="SignUp" to="/SignUp">
     <el-menu-item index="5">注册</el-menu-item>
           </router-link>
-          <router-link id="Home" to="/Home">
+          <router-link id="Write" to="/Write">
     <el-menu-item index="5">写文章</el-menu-item>
           </router-link>
       </span>

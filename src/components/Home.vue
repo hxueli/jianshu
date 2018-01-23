@@ -4,7 +4,6 @@
       <div class="block">
         <el-carousel height="220px">
           <el-carousel-item v-for="item in 3" :key="item">
-            <!--<h3>{{ item }}</h3>-->
             <div v-if="item===1"><img src="../assets/1.jpg" height="220px" width="880px"/></div>
             <div v-if="item===2"><img src="../assets/2.jpg" height="220px" width="880px"/></div>
             <div v-if="item===3"><img src="../assets/3.jpg" height="220px" width="880px"/></div>
@@ -22,21 +21,35 @@
       </span>
       <br>
 
-      <!--<el-tag>-->
-        <!--<router-link id="Home" to="/Home"><a>Carousel</a></router-link>-->
-      <!--</el-tag>-->
-      <!--<el-tag>-->
-        <!--<router-link id="One" to="/Home/One">One</router-link>-->
-      <!--</el-tag>-->
-      <!--<el-tag>-->
-        <!--<router-link id="Two" to="/Home/Two">Two</router-link>-->
-      <!--</el-tag>-->
       <hr>
       <div>
         <Main></Main>
+        <hr>
         <Main></Main>
       </div>
-      <!--<router-link id="Home" to="/Home"><a></a></router-link>-->
+    </div>
+    <div class="container-aside" >
+<div>
+  <ul>
+    <li>新上榜</li>
+    <li>七日热门</li>
+    <li>30日热门</li>
+    <li>简书出版</li>
+    <li>简书大学堂</li>
+  </ul>
+  <div class="erweima">
+    <span>二维码</span>
+  </div>
+  <ul>
+    <span>推荐作者</span>
+    <span>换一批</span>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</div>
     </div>
     <router-view></router-view>
   </div>
@@ -55,16 +68,57 @@
 
 <style>
 
+  * {
+    margin: 0px;
+    list-style: none;
+  }
+
   .container {
     position: relative;
     width: 1214px;
-    margin: 10px 76px;
+    margin: 10px auto;
   }
 
   .container-main {
     position: relative;
     width: 880px;
 
+  }
+
+  .container-aside {
+    width: 334px;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 220px;
+  }
+  .erweima  {
+    width: 294px;
+    height: 80px;
+    margin: 24px 0px;
+    padding: 2px 0px;
+    background-color: lightgray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    float: right;
+  }
+
+
+  .container-aside ul li {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    height: 30px;
+    margin: 6px 0px;
+    padding: 4px 0px;
+    background-color: gold;
+    opacity:0.6;
+    border-radius: 20px;
   }
 
   .el-carousel__item h3 {
