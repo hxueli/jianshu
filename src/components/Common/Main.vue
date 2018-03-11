@@ -1,53 +1,55 @@
 <template>
-  <div>
-    <table id = 'app'>
-      <tr>
-        <th>name</th>
-        <th>age</th>
-        <th>sex</th>
-      </tr>
-    <tr v-for = "pep in peps ">
-      <td>{{pep.name}}</td>
-      <td>{{pep.age}}</td>
-      <td>
-        <span v-if="pep.sex == 1">男</span>
-        <span v-else>女</span>
-      </td>
-    </tr>
-    </table>
+
+  <div class="hello">
+    <ul>
+      <li v-for="goods in testMsg">
+        <span <img class="foodsname" src="../../assets/logo.png"  height="30px" /></span>
+        <span class="foodsname">{{ goods.goodsName }}</span>
+        <span class="article" style="display: block; width: 60%; margin: 5px 0px;">{{ goods.price }}</span>
+      </li>
+    </ul>
   </div>
+
 </template>
 
-<!--<script>-->
-  <!--import Vue from 'vue'-->
-  <!--import VueRouter from 'vue-router'-->
-  <!--Vue.use(VueResource)-->
+<script>
+import axios from 'axios'
 
-  <!--var app = new Vue({-->
-    <!--el: '#app',-->
-    <!--data: {-->
-      <!--peps: ''-->
-    <!--},-->
-    <!--mounted: function() {-->
-      <!--this.getJsonInfo()-->
-    <!--}-->
-    <!--methods: {-->
-      <!--getJsonInfo: function() {-->
-        <!--this.$http.get('/post').then(function(response){-->
-          <!--console.log(response.data.data)-->
-          <!--var resdata = response.data.data-->
-          <!--this.peps = resdata-->
-        <!--}).catch(function(response){-->
-          <!--console.log(response)-->
-          <!--console.log("居然没有弹窗")-->
-        <!--})-->
-      <!--}-->
-    <!--}-->
-  <!--})-->
-<!--</script>-->
+export default {
+  name: 'hello',
+  created () {
+    axios.get('http://localhost:3000/api')
+      .then(response => {
+        console.log(response)
+        this.testMsg = response.data
+      })
+      .catch(error => {
+        console.log(error)
+        alert('error')
+      })
+  },
+  data () {
+    return {
+      testMsg: []
+    }
+  }
+}
+</script>
 
-
-
+<style>
+ul {
+list-style-type: none;
+padding: 0;
+}
+li {
+text-align: left;
+margin-left: 3%;
+}
+li .foodsname {
+  display: inline;
+  vertical-align: middle;
+}
+</style>
 
 
 

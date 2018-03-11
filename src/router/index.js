@@ -48,4 +48,3 @@ new Vue({
   el: '#main',
   render: h => h(editor)
 });
-
