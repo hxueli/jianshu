@@ -2,11 +2,19 @@
 
   <div class="hello">
     <ul>
-      <li v-for="goods in testMsg">
-        <span <img class="foodsname" src="../../assets/logo.png"  height="30px" /></span>
-        <span class="foodsname">{{ goods.goodsName }}</span>
-        <span class="article" style="display: block; width: 60%; margin: 5px 0px;">{{ goods.price }}</span>
+      <li v-for="user in users">
+        <span> <img class="profilePicture" src="../../assets/logo.png"  height="30px"/></span>
+        <span><img class="artitleimg" src="../../assets/1.jpg" /></span>
+        <span class="username">{{ user.username }}</span>
+        <h3 style="display: block;">{{ user.atitle }}</h3>
+        <span class="article" style="display: block; width: 60%; margin: 5px 0px;">{{ user.article }}</span>
+        <span> <img class="profilePicture" src="../../assets/icon1.png"  height="30px"/></span>
+        <span>{{ user.alabel }}</span><span>
+        <img class="profilePicture" src="../../assets/icon2.png"  height="30px"/></span>
+        <span>{{ user.alabel }}</span>
       </li>
+    </ul>
+    <ul>
     </ul>
   </div>
 
@@ -21,7 +29,7 @@ export default {
     axios.get('http://localhost:3000/api')
       .then(response => {
         console.log(response)
-        this.testMsg = response.data
+        this.users = response.data
       })
       .catch(error => {
         console.log(error)
@@ -30,7 +38,7 @@ export default {
   },
   data () {
     return {
-      testMsg: []
+      users: []
     }
   }
 }
@@ -45,10 +53,17 @@ li {
 text-align: left;
 margin-left: 3%;
 }
-li .foodsname {
+li .profilePicture {
   display: inline;
   vertical-align: middle;
+  margin: 0 3px;
 }
+  .artitleimg {
+    height: 137px;
+    width: 35%;
+    float: right;
+    margin-right: 3%
+  }
 </style>
 
 

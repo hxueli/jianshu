@@ -6,17 +6,18 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import VueResource from 'vue-resource';
-Vue.use(VueResource);
+// import VueResource from 'vue-resource';
+// Vue.use(VueResource);
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
-/* eslint-disable no-new */
+/* eslint-disable */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
   components: { App }
 })
+/* eslint-enable */

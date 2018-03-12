@@ -14,12 +14,12 @@
 //  import Main from './components/Common/Main.vue'
 
 export default {
-  name: 'app',
-  components: {
-    Header
+    name: 'app',
+    components: {
+      Header
 //    Aside,
 //    Main
-  }
+    }
 }
 </script>
 

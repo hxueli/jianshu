@@ -43,8 +43,10 @@ export default new Router({
   ]
 })
 
-var editor = require('../components/Write.vue');
+var editor = require('../components/Write.vue')
+/* eslint-disable */
 new Vue({
   el: '#main',
   render: h => h(editor)
-});
+})
+/* eslint-enable */
