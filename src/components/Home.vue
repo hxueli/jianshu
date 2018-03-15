@@ -25,32 +25,31 @@
       <div>
         <Main></Main>
         <hr>
-        <Main></Main>
       </div>
     </div>
-    <div class="container-aside" >
-<div>
-  <ul>
-    <li>新上榜</li>
-    <li>七日热门</li>
-    <li>30日热门</li>
-    <li>简书出版</li>
-    <li>简书大学堂</li>
-  </ul>
-  <div class="erweima">
-    <span>二维码</span>
-  </div>
-  <ul>
-    <span>推荐作者</span>
-    <span>换一批</span>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-    <li>5</li>
-  </ul>
-</div>
-    </div>
+    <!--<div class="container-aside">-->
+      <!--<div>-->
+        <!--<ul>-->
+          <!--<li>新上榜</li>-->
+          <!--<li>七日热门</li>-->
+          <!--<li>30日热门</li>-->
+          <!--<li>简书出版</li>-->
+          <!--<li>简书大学堂</li>-->
+        <!--</ul>-->
+        <!--<div class="erweima">-->
+          <!--<span>二维码</span>-->
+        <!--</div>-->
+        <!--<ul>-->
+          <!--<span>推荐作者</span>-->
+          <!--<span>换一批</span>-->
+          <!--<li>1</li>-->
+          <!--<li>2</li>-->
+          <!--<li>3</li>-->
+          <!--<li>4</li>-->
+          <!--<li>5</li>-->
+        <!--</ul>-->
+      <!--</div>-->
+    <!--</div>-->
     <router-view></router-view>
   </div>
 </template>
@@ -71,6 +70,10 @@
   * {
     margin: 0px;
     list-style: none;
+  }
+
+  hr {
+    opacity: 0.2;
   }
 
   .container {

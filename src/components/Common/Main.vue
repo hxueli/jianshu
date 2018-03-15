@@ -3,15 +3,17 @@
   <div class="hello">
     <ul>
       <li v-for="user in users">
-        <span> <img class="profilePicture" src="../../assets/logo.png"  height="30px"/></span>
-        <span><img class="artitleimg" src="../../assets/1.jpg" /></span>
-        <span class="username">{{ user.username }}</span>
+        <a href="http://localhost:8080/#/SignIn"> <img class="profilePicture" src="../../assets/logo.png"  height="30px"/></a>
+        <a><img class="artitleimg" src="../../assets/1.jpg" /></a>
+        <a href="http://localhost:8080/#/SignUp" class="username">{{ user.username }}</a>
         <h3 style="display: block;">{{ user.atitle }}</h3>
-        <span class="article" style="display: block; width: 60%; margin: 5px 0px;">{{ user.article }}</span>
-        <span> <img class="profilePicture" src="../../assets/icon1.png"  height="30px"/></span>
-        <span>{{ user.alabel }}</span><span>
-        <img class="profilePicture" src="../../assets/icon2.png"  height="30px"/></span>
+        <span class="article">{{ user.article }}</span>
         <span>{{ user.alabel }}</span>
+        <i class="iconfont">&#xe6e6;<span>{{ user.num1 }}</span></i>
+        <i class="iconfont">&#xe86e;<span>{{ user.num2 }}</span></i>
+        <i class="iconfont">&#xe758;<span>{{ user.num3 }}</span></i>
+
+
       </li>
     </ul>
     <ul>
@@ -45,6 +47,23 @@ export default {
 </script>
 
 <style>
+  @font-face {
+    font-family: 'iconfont';  /* project id 593223 */
+    src: url('//at.alicdn.com/t/font_593223_ckbjfm9yamxi529.eot');
+    src: url('//at.alicdn.com/t/font_593223_ckbjfm9yamxi529.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_593223_ckbjfm9yamxi529.woff') format('woff'),
+    url('//at.alicdn.com/t/font_593223_ckbjfm9yamxi529.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_593223_ckbjfm9yamxi529.svg#iconfont') format('svg');
+  }
+
+  .iconfont{
+    margin-left: 2px;
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
 ul {
 list-style-type: none;
 padding: 0;
@@ -63,6 +82,15 @@ li .profilePicture {
     width: 35%;
     float: right;
     margin-right: 3%
+  }
+  .article {
+    width: 60%;
+    height: 42px;
+    margin: 5px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
   }
 </style>
 
